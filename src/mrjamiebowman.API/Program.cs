@@ -1,10 +1,22 @@
+using mrjamiebowman.SQL.Data;
+using mrjamiebowman.SQL.Data.Repositories;
+using mrjamiebowman.SQL.Domain.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Add Swagger services
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// inject: data service
+builder.Services.AddTransient<IDataService, DataService>();
+
+// inject: repositories
+builder.Services.AddKeyedTransient<ICustomerRepository, CustomerEntityFrameworkRepository>("ef");
+builder.Services.AddKeyedTransient<ICustomerRepository, CustomerDapperRepository>("dapper");
 
 var app = builder.Build();
 
@@ -14,10 +26,21 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+// Enable Swagger middleware
+if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
-app.Run();
+try
+{
+    app.Run();
+} catch (Exception ex) {
+    throw;
+}
+
