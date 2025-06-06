@@ -3,12 +3,47 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EAE76C82-C79E-4149-8F9B-11ADE646FC16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9F63AD4D-4688-4667-BA2F-87D0300EA701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mrjamiebowman.SQL.Data", "src\mrjamiebowman.SQL.Data\mrjamiebowman.SQL.Data.csproj", "{C383BACC-206E-4607-A8D7-3BE032C68C3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mrjamiebowman.API", "src\mrjamiebowman.API\mrjamiebowman.API.csproj", "{47B1AD97-C9B2-45A2-B9B9-ADBDEBFFDBB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mrjamiebowman.SQL.Domain", "src\mrjamiebowman.SQL.Domain\mrjamiebowman.SQL.Domain.csproj", "{DFE7A778-18A8-46A3-A22F-456048CBF209}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C383BACC-206E-4607-A8D7-3BE032C68C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C383BACC-206E-4607-A8D7-3BE032C68C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C383BACC-206E-4607-A8D7-3BE032C68C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C383BACC-206E-4607-A8D7-3BE032C68C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B1AD97-C9B2-45A2-B9B9-ADBDEBFFDBB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B1AD97-C9B2-45A2-B9B9-ADBDEBFFDBB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B1AD97-C9B2-45A2-B9B9-ADBDEBFFDBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B1AD97-C9B2-45A2-B9B9-ADBDEBFFDBB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE7A778-18A8-46A3-A22F-456048CBF209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE7A778-18A8-46A3-A22F-456048CBF209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE7A778-18A8-46A3-A22F-456048CBF209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE7A778-18A8-46A3-A22F-456048CBF209}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C383BACC-206E-4607-A8D7-3BE032C68C3F} = {EAE76C82-C79E-4149-8F9B-11ADE646FC16}
+		{47B1AD97-C9B2-45A2-B9B9-ADBDEBFFDBB7} = {EAE76C82-C79E-4149-8F9B-11ADE646FC16}
+		{DFE7A778-18A8-46A3-A22F-456048CBF209} = {EAE76C82-C79E-4149-8F9B-11ADE646FC16}
 	EndGlobalSection
 EndGlobal
